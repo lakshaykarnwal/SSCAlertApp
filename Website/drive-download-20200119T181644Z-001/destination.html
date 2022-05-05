@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script>
+			function initialize()
+			{
+				output = document.getElementById("div");
+				input = location.search.substring(1).split("&");
+				firstName = input[0].split("=")[1];
+				LastName = input[1].split("=")[1];
+				textColor = input[2].split("=")[1];
+				bgColor = input[3].split("=")[1];
+				font = input[4].split("=")[1];
+				fontSize = input[5].split("=")[1];
+				
+				output.innerHTML = "Hello " + firstName + " " + LastName;
+				output.style.color = textColor;
+				output.style.backgroundColor = bgColor;
+				output.style.fontFamily = font;
+				output.style.fontSize = fontSize + "px";
+				
+			}
+		</script>
+	
+	</head>
+	<body onload = "initialize();">
+		<div id = "div"></div>
+	
+	</body>
+</html>
